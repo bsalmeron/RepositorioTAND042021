@@ -27,3 +27,6 @@ vectorCalculado[1:4]
 #Funciones de los vectores 
 max(vectorCalculado)
 min(vectorCalculado)
+
+
+pRUEBA
