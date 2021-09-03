@@ -28,6 +28,13 @@ which(is.na(d))
 vectorTemp= x[!is.na(x)]
 vectorTemp
 sum(vectorTemp)
+sum(na.omit(d))
+
+#Factor: Categoria 
+tallas=c("S","M","XL","XXL","S","M","XL","XXL","S","M","XL","XXL","S","M","XL","XXL")
+class(tallas)
+TallasFactor= as.factor(tallas)
+class(TallasFactor)
 
 
 
