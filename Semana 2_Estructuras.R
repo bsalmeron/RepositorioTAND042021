@@ -27,4 +27,7 @@ sum(d)
 which(is.na(d))
 vectorTemp= x[!is.na(x)]
 vectorTemp
-sum()
+sum(vectorTemp)
+
+
+
