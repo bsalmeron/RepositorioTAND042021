@@ -15,3 +15,16 @@ sum(c)
 mean(c)
 sort(c, dec=TRUE)
 rev(c)
+
+#Manejo de valores vacios
+d=1:10
+d
+d[13]=13
+d
+sum(d)
+
+#identificar cuantos NA tengo 
+which(is.na(d))
+vectorTemp= x[!is.na(x)]
+vectorTemp
+sum()
