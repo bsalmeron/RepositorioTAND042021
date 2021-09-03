@@ -49,7 +49,7 @@ Var_Matriz=rbind(v1,v2,v3,v4)
 Var_Matriz
 
 Var_Matriz2=cbind(v1,v2,v3,v4)
-Var_Matriz2
+Var_Matriz2[2,]
 
 v5 = c(NA,1,2)
 v6= c(3,4,NA)
@@ -57,4 +57,20 @@ Var_Matriz3 = cbind(v5,v6)
 Var_Matriz3
 
 
+
+x=1:12
+matrix(x,nrow = 3)
+#Funciones con las matriz
+
+nrow(Var_Matriz3)
+ncol(Var_Matriz3)
+
+colnames(Var_Matriz2)= c("Perdidas","Q22020","Q32020","Q12021")
+ 
+Var_Matriz2
+
+sum(Var_Matriz2[,"Perdidas"])
+rowSums(Var_Matriz2)
+rowMeans(Var_Matriz2)
+colMeans(Var_Matriz2)
 
