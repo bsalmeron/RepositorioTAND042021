@@ -35,6 +35,26 @@ tallas=c("S","M","XL","XXL","S","M","XL","XXL","S","M","XL","XXL","S","M","XL","
 class(tallas)
 TallasFactor= as.factor(tallas)
 class(TallasFactor)
+levels(TallasFactor)
+
+#Matriz : conjunto de vectores del mismo tipo 
+
+
+v1=1:4
+v2=5:8
+v3=9:12
+v4=13:16
+
+Var_Matriz=rbind(v1,v2,v3,v4)
+Var_Matriz
+
+Var_Matriz2=cbind(v1,v2,v3,v4)
+Var_Matriz2
+
+v5 = c(NA,1,2)
+v6= c(3,4,NA)
+Var_Matriz3 = cbind(v5,v6)
+Var_Matriz3
 
 
 
