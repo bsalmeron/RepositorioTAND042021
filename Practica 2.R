@@ -7,3 +7,4 @@ Tratamiento=c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE)
 
 #Usar la funcion data.frame para crear el dataframe
 mispacientes=data.frame(genero,Edad,Glucemia_basal,Tratamiento)
+View(mispacientes)
