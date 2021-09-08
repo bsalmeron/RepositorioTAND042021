@@ -54,6 +54,59 @@ censo[2:4, ]
 
 select(censo,nombre,apellido)
 filter(censo, nro_hijos==2)
-group_by()
-inner_join()
+ 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#Frecuencias 
+fuma <- c('Frecuente', 'Nunca', 'A veces', 'A veces', 'A veces',
+          'Nunca', 'Frecuente', NA, 'Frecuente', NA, 'hola', 
+          'Nunca', 'Hola', 'Frecuente', 'Nunca')
+
+#Frecuencia absoluta uso la funcion table()
+table(fuma)
+
+table(fuma, useNA='always')
+
+table(fuma, exclude=c('Hola', 'hola'))
+
+tabla1 <- table(fuma, exclude=c('Hola', 'hola', NA))
+tabla1
+
+#Tabla en dos vias 
+
+sexo <- c('Hombre', 'Hombre', 'Hombre', NA, 'Mujer',
+          'Casa', 'Mujer', 'Mujer', 'Mujer', 'Hombre', 'Mujer', 
+          'Hombre', NA, 'Mujer', 'Mujer')
+
+
+Datos = data.frame(fuma,sexo)
+
+table(Datos$sexo,Datos$fuma)
+
+tabla2 <- table(sexo, fuma, exclude=c('Hola', 'hola', 'Casa', NA))
+tabla2
+
+
+#Frecuencia relativa una via 
+
+prop.table(x=tabla1)
+
+#Frecuencia relativa en dos vias
+
+tabla3 <- prop.table(x=tabla2)
+tabla3
