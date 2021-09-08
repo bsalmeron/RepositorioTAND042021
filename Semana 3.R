@@ -27,4 +27,33 @@ censo$sexo= as.factor(censo$sexo)
 plot(censo$sexo)
 
 
+#Importar datos 
+
+library(readr)
+Covid <- read_csv("C:/Users/brayn/OneDrive/Universidad Hispano/Modulo 5/OneDrive_2021-08-24/Modulo 5 BIII 2021/bases de datos/COVID-19 Encuesta a estudiantes.csv")
+View(Covid)
+
+class(Covid)
+
+Covid= data.frame(Covid)
+str(Covid)
+
+Covid$Prefered.social.media.platform = as.factor(Covid$Prefered.social.media.platform)
+plot(Covid$Prefered.social.media.platform)
+
+
+
+censo$nro_hijos= censo$nro_hijos+1
+censo
+
+nrow(censo)
+ncol(censo)
+length(censo)
+
+censo[2:4, ]
+
+select(censo,nombre,apellido)
+filter(censo, nro_hijos==2)
+group_by()
+inner_join()
 
