@@ -24,5 +24,6 @@ mean(mispacientes$Glucemia_basal)
 sd(mispacientes$Glucemia_basal)
 #Redondeo 
 round(sd(mispacientes$Glucemia_basal),2)
+#Quantile 
 
 
