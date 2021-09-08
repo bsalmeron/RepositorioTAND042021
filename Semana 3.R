@@ -77,7 +77,7 @@ fuma <- c('Frecuente', 'Nunca', 'A veces', 'A veces', 'A veces',
           'Nunca', 'Frecuente', NA, 'Frecuente', NA, 'hola', 
           'Nunca', 'Hola', 'Frecuente', 'Nunca')
 
-#Frecuencia absoluta uso la funcion table()
+#Frecuencia absoluta uso la funcion table() en una via 
 table(fuma)
 
 table(fuma, useNA='always')
@@ -87,7 +87,7 @@ table(fuma, exclude=c('Hola', 'hola'))
 tabla1 <- table(fuma, exclude=c('Hola', 'hola', NA))
 tabla1
 
-#Tabla en dos vias 
+#Tabla frecuencias en dos vias 
 
 sexo <- c('Hombre', 'Hombre', 'Hombre', NA, 'Mujer',
           'Casa', 'Mujer', 'Mujer', 'Mujer', 'Hombre', 'Mujer', 
@@ -95,6 +95,7 @@ sexo <- c('Hombre', 'Hombre', 'Hombre', NA, 'Mujer',
 
 
 Datos = data.frame(fuma,sexo)
+
 
 table(Datos$sexo,Datos$fuma)
 
@@ -105,6 +106,10 @@ tabla2
 #Frecuencia relativa una via 
 
 prop.table(x=tabla1)
+
+
+
+
 
 #Frecuencia relativa en dos vias
 
