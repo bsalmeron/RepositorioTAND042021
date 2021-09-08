@@ -19,11 +19,10 @@ min(mispacientes$Glucemia_basal)
 
 #Media
 mean(mispacientes$Glucemia_basal)
-
 #Dev standar 
 sd(mispacientes$Glucemia_basal)
 #Redondeo 
 round(sd(mispacientes$Glucemia_basal),2)
 #Quantile 
-
+quantile (mispacientes$Glucemia_basal)
 
