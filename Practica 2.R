@@ -8,3 +8,8 @@ Tratamiento=c(TRUE,FALSE,TRUE,TRUE,FALSE,FALSE,TRUE,TRUE,FALSE,TRUE)
 #Usar la funcion data.frame para crear el dataframe
 mispacientes=data.frame(genero,Edad,Glucemia_basal,Tratamiento)
 View(mispacientes)
+
+#Descripción de datos cuantitativos  Glusemina basal 
+
+#Maximo valor de la glusemina para traer una columna a la vez uso $
+max(mispacientes$Glucemia_basal)
