@@ -13,3 +13,16 @@ View(mispacientes)
 
 #Maximo valor de la glusemina para traer una columna a la vez uso $
 max(mispacientes$Glucemia_basal)
+
+#Min valor de la glusemina para traer una columna a la vez uso $
+min(mispacientes$Glucemia_basal)
+
+#Media
+mean(mispacientes$Glucemia_basal)
+
+#Dev standar 
+sd(mispacientes$Glucemia_basal)
+#Redondeo 
+round(sd(mispacientes$Glucemia_basal),2)
+
+
