@@ -19,3 +19,12 @@ sexo <- c("HOMBRE", "MUJER", "HOMBRE", "HOMBRE")
 nro_hijos <- c(1, 2, 3, 4)
 
 censo = data.frame(nombre,apellido,fecha_nacimiento,sexo,nro_hijos)
+
+censo
+View(censo)
+str(censo)
+censo$sexo= as.factor(censo$sexo)
+plot(censo$sexo)
+
+
+
