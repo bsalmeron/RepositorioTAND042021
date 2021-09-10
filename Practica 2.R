@@ -26,3 +26,12 @@ round(sd(mispacientes$Glucemia_basal),2)
 #Quantile 
 quantile (mispacientes$Glucemia_basal)
 
+#Frecuencias abs
+mispacientes$genero
+tabla1=table(mispacientes$genero) #Funcion para calucos fabsoluta
+prop.table(x=tabla1)# F relativa 
+
+
+
+
+
