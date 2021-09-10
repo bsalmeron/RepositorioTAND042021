@@ -33,5 +33,18 @@ prop.table(x=tabla1)# F relativa
 
 
 
+#Author DataFlair 
 
+int_vec <- c(1,2,3)  
 
+char_vec <- c("a", "b", "c") 
+
+bool_vec <- c(TRUE, TRUE, FALSE)  
+
+Salario <- c(5000,56700,6000)
+
+df = data.frame(int_vec,char_vec,bool_vec,Salario)
+
+df$Salario= formulaCalcular 
+
+df$Salario = df$Salario + df$Salario*0.05
