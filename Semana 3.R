@@ -122,9 +122,12 @@ tabla3
 install.packages("tidyverse")#Descargamos
 library(tidyverse)#Instalamos
 
+#Analisis, limpieza de datos 
 
-data("iris")
+data("iris") #Recordar iris es datset de pruebas cargado por R 
 #Select select(dataframe, colum.....)
+#Generacion de variables temporables para guardar la seleccion muy 
+#importante
 IrisTemp=select(iris,Species,Petal.Width)
 View(IrisTemp)
 
