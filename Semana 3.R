@@ -136,6 +136,12 @@ class(Productos)
 #Covertirlo en df
 Productos=data.frame(Productos)
 class(Productos)
+#Exploracion basica de los datos 
+#Top 10
+head(Productos, n=10)
+View(head(Productos, n=10))
+#Seleccionar nuestros datos 
+
 
 
 
