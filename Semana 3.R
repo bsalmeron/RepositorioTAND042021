@@ -119,9 +119,14 @@ tabla3
 
 #Tidyvers
 
-install.packages("Tidyvers")#Descargamos
-library()#Instalamos
+install.packages("tidyverse")#Descargamos
+library(tidyverse)#Instalamos
 
+
+data("iris")
+#Select select(dataframe, colum.....)
+IrisTemp=select(iris,Species,Petal.Width)
+View(IrisTemp)
 
 
 
