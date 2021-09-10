@@ -115,3 +115,26 @@ prop.table(x=tabla1)
 
 tabla3 <- prop.table(x=tabla2)
 tabla3
+
+
+#Tidyvers
+
+install.packages("Tidyvers")#Descargamos
+library()#Instalamos
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
