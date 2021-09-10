@@ -122,7 +122,7 @@ tabla3
 install.packages("tidyverse")#Descargamos
 library(tidyverse)#Instalamos
 
-#Analisis, limpieza de datos 
+#Analisis, explorartorio y limpieza de datos 
 
 data("iris") #Recordar iris es datset de pruebas cargado por R 
 #Select select(dataframe, colum.....)
@@ -131,7 +131,11 @@ data("iris") #Recordar iris es datset de pruebas cargado por R
 IrisTemp=select(iris,Species,Petal.Width)
 View(IrisTemp)
 
-
+#Estructura cargada 
+class(Productos)
+#Covertirlo en df
+Productos=data.frame(Productos)
+class(Productos)
 
 
 
