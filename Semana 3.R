@@ -159,8 +159,9 @@ View(Productos_Marca_anio_2017)
 #!=
 filter(Productos_Marca_anio,model_year==2017 & brand_id<7 )
 
-
-
+#Rename (df, NombreNuevo=NombreViejo) = renombrar 
+Productos_Marca_anio =rename(Productos_Marca_anio,Año=model_year)
+View(Productos_Marca_anio)
 
 
 
