@@ -149,8 +149,11 @@ filter(Productos_Marca_anio,model_year==2017 & brand_id<7 )
 Productos_Marca_anio =rename(Productos_Marca_anio,Año=model_year)
 View(Productos_Marca_anio)
 
-#
+#arrange (df,columnaOrdenar)
 
+Productos
+View(arrange(Productos,brand_id))#Asc
+View(arrange(Productos,desc(brand_id)))#desc
 
 
 
