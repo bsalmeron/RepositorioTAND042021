@@ -164,6 +164,21 @@ Productos_alterados=mutate(Productos_alterados,PrecioIva=as.numeric(list_price) 
 
 #Group by
 
+# data =  Personas%>%group_by(sexo)%>%
+# summarise(n(id))
+# 
+# SQL
+#
+# Select  sexo,  count(Id) from personas
+# Group by sexo
+
+ Productos%>%group_by(brand_id)%>%
+            summarise(Cantidad=n())%>%
+            filter(Cantidad>=10)%>%
+            arrange(Cantidad)
+ 
+ #N=cOUNT
+
 
 
 
