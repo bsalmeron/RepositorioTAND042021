@@ -55,23 +55,6 @@ censo[2:4, ]
 select(censo,nombre,apellido)
 filter(censo, nro_hijos==2)
  
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 #Frecuencias 
 fuma <- c('Frecuente', 'Nunca', 'A veces', 'A veces', 'A veces',
           'Nunca', 'Frecuente', NA, 'Frecuente', NA, 'hola', 
@@ -167,9 +150,6 @@ Productos_Marca_anio =rename(Productos_Marca_anio,Año=model_year)
 View(Productos_Marca_anio)
 
 #
-
-
-
 
 
 
