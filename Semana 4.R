@@ -155,10 +155,14 @@ Productos
 View(arrange(Productos,brand_id))#Asc
 View(arrange(Productos,desc(brand_id)))#desc
 
+#mutate mutate(df, nombreColumna =operacion)
+Productos_alterados=mutate(Productos,FechaHoy=Sys.Date())
 
+Productos_alterados=mutate(Productos_alterados,Antiguedad=2021-model_year)
 
+Productos_alterados=mutate(Productos_alterados,PrecioIva=as.numeric(list_price) + (as.numeric(list_price))*0.13)
 
-
+#Group by
 
 
 
