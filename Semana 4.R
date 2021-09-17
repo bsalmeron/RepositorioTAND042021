@@ -172,25 +172,53 @@ Productos_alterados=mutate(Productos_alterados,PrecioIva=as.numeric(list_price) 
 # Select  sexo,  count(Id) from personas
 # Group by sexo
 
+ 
  Productos%>%group_by(brand_id)%>%
             summarise(Cantidad=n())%>%
             filter(Cantidad>=10)%>%
             arrange(Cantidad)
+
  
- #N=cOUNT
+ hist(as.double(Productos$list_price))
+ 
+ 
+ 
+ #Correlacion IRIS
+ 
+ peso <- c(51, 59, 49, 54, 50, 55, 48, 53, 52, 57)
+ long <- c(33.5, 38, 32, 37.5, 31.5, 33, 31, 36.5, 34, 35)
+ 
+ df_info= data.frame(peso,long)
+ 
+ pairs(df_info$long ~ df_info$peso)
+ 
 
-
-
-
-
-
-
+ 
+ 
 Productos
 Probabilidad =select(Productos,brand_id,model_year,model_year)%>%
 filter(as.integer(model_year)>2017)%>%group_by(brand_id)%>%summarise(Cantidad=n())
 
 
  
+#JOINS
+
+#Outer join: merge(x = df1, y = df2, by = "CustomerId", all = TRUE)
+
+Almacen=rename(Almacen, ID_Almacen=ID)
+
+inner_join= merge(Almacen, Base_datos_productos, by = "ID_Almacen")#Inner join 
+View(inner_join)
+
+left_join =merge(Almacen, Base_datos_productos, by = "ID_Almacen", all.x = TRUE)
+
+View(left_join)
+
+
+Right_join =merge(Almacen, Base_datos_productos, by = "ID_Almacen", all.y = TRUE)
+
+View(Right_join)
+
 
 
 
