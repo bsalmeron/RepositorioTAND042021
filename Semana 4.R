@@ -181,7 +181,8 @@ Productos_alterados=mutate(Productos_alterados,PrecioIva=as.numeric(list_price) 
  
  hist(as.double(Productos$list_price))
  
- 
+ Facturas_Ventas=merge(Datos_Facturas,Datos_ventas,"EmployeeID") 
+ Facturas_Ventas%>%group_by(EmployeeID)%>%summarise(n())
  
  #Correlacion IRIS
  
