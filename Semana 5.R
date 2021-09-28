@@ -40,7 +40,36 @@ plot(mis_fechas, rnorm(50), main = "Gráfico basado en fechas",bg = "blue",
 
 
 #Funcion 
-Mi_PrimerFx= function()
+Mi_PrimerFx= function(Fechas,cantidad, titulo, subTitulo){
+retorno=  plot(Fechas,cantidad , main = titulo,
+       type = "l", col="blue", xlab = "Años", ylab = "Ingresos", 
+        sub = subTitulo, cex.main=1)
+   return(retorno)
+}
+
+
+
+#Generar una serie tiempo de los salarios de EMPLEADOS por año 
+Fechas = seq(as.Date("2005/1/1"), by = "month", length = 50)
+SalariosMensuales= rnorm(50, mean = 500, sd = 8)
+Df_SalariosAnuales = data.frame(Fechas,SalariosMensuales)
+View(Df_SalariosAnuales)
+
+Mi_PrimerFx(Df_SalariosAnuales$Fechas,Df_SalariosAnuales$SalariosMensuales,
+            "Representacion salarios anual",
+             "Indice de salarios empresa Patitos")
+
+
+#Generar una serie de tiempo de muertes por año
+Fechas = seq(as.Date("2005/1/1"), by = "month", length = 50)
+Muertes= rnorm(50, mean = 2000, sd = 8)
+df_muertes = data.frame(Fechas,Muertes)
+View(df_muertes)
+
+GraficoMuertesAnuales = Mi_PrimerFx(df_muertes$Fechas,df_muertes$Muertes,
+            "Representacion muertes por año",
+            "Datos de la CCSS")
+
 
 
 
