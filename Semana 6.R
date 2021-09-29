@@ -1,9 +1,26 @@
 grasas <- read.table('http://verso.mat.uam.es/~joser.berrendero/datos/EdadPesoGrasas.txt', header = TRUE)
+
+
+grasas = data.frame(grasas)
+
+View(iris)
+
 names(grasas)
 
-pairs(grasas)
+#AED-EDA
 
-correlaccion= round(cor(grasas),2) 
+
+#Investigación 
+pairs(grasas)
+#Se puede ver ........
+
+
+#Resumen de correlación 
+cor(grasas)
+
+#Grafica de correlacion 
+correlaccion= round(cor(grasas),1) 
+#Confirmar la instalacion del paquete
 corrplot(correlaccion, method="number", type="upper")
 # 
 # El comando básico es lm (linear models). 
@@ -18,10 +35,15 @@ corrplot(correlaccion, method="number", type="upper")
 # Mediante el comando
 # summary obtenemos un resumen de los principales resultados:
 
+#Regresion lineal (y= variable a predecir - x = regresora, data = df) 
 regresion <- lm(grasas ~ edad, data = grasas)
 summary(regresion)
 
+#R2 0.70 = 70%
 
+#100% - 70% = 30%
+
+#Ploteo de regresion 
 plot(grasas$edad, grasas$grasas, xlab='Edad', ylab='Grasas')
 abline(regresion)
 
@@ -34,7 +56,10 @@ abline(regresion)
 # variables regresoras y usar el comando predict:
 
 
-nuevas.edades <- data.frame(edad = sample(25:40,10,replace=F))
+nuevas.edades <- data.frame(edad = sample(60:75,10,replace=F))
+
+
+
 predict(regresion, nuevas.edades)
 
 
